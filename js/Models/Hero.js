@@ -1,79 +1,65 @@
 //Hero Object Model
-function Hero(){
-    var Id 
-    var Name 
-    var Type 
-    var Description  
-    var BaseAtack
-    var BaseDefense
-    var BaseEffect
-    var MaxAtack
-    var MaxDefense
-    var CurrentAtack
-    var CurrentDefense
-    var CurrentEffect
-    var FrontImage
-    var BackImage
-    var Hability
-    var BaseHealth
-    var MaxHealth
-    var CurrentHealth
+exports.Id
+exports.Name
+exports.Type
+exports.Description
+exports.BaseAtack
+exports.BaseDefense
+exports.MaxAtack
+exports.MaxDefense
+exports.CurrentAtack
+exports.CurrentDefense
+exports.FrontImage
+exports.Hability
+exports.BaseHealth
+exports.MaxHealth
+exports.CurrentHealth
 //Setters
-    function setId(id){
-        this.Id = id
-    }
-    function setName(name){
-        this.Name = name   
-    }
-    function setType(type){
-        this.Type = type
-    }
-    function setDescription(description){
-        this.Description = description  
-    }
-    function setCost(cost){
-        this.Cost = cost 
-    }
-    function setBaseAtack(baseatack){
-        this.BaseAtack = baseatack
-    }
-    function setBaseDefense(basedefence){
-        this.basedefence = basedefence
-    }
-    function setBaseEffect(baseefect){
-        this.BaseEffect = baseefect
-    }
-    function setMaxAtack(maxatack){
-        this.MaxAtack = maxatack
-    }
-    function setMaxDefense(maxdefense){
-        this.maxdefense = maxdefense
-    }
-    function setCurrentAtack(currentatack){
-        this.CurrentAtack = currentatack
-    }
-    function setCurrentDefense(currentdefense){
-        this.CurrentDefense = currentdefense
-    }
-    function setCurrentEffect(currenteffect){
-        this.CurrentEffect = currenteffect
-    }
-    function setFrontImage(frontimage){
-        this.FrontImage = frontimage
-    }
-    function setBackImage(backimage){
-        this.BackImage = backimage
-    }
-    function setHability(hability){
-        this.Hability = hability
-    }
-    function setBaseHealth(basehealth){
-        this.BaseHealth= basehealth
-    }
-    function setMaxHealth(maxhealth){
-        this.MaxHealth= maxhealth
-    }
-    function setCurrentHealth(currenthealth){
-        this.CurrentHealth= currenthealth
-    }
+exports.setId = function setId(id) {
+    this.Id = id
+}
+exports.setName = function setName(name) {
+    this.Name = name
+}
+exports.setType = function setType(type) {
+    this.Type = type
+}
+exports.setDescription = function setDescription(description) {
+    this.Description = description
+}
+exports.setCost = function setCost(cost) {
+    this.Cost = cost
+}
+exports.setBaseAtack = function setBaseAtack(baseatack) {
+    this.BaseAtack = baseatack
+}
+exports.setBaseDefense = function setBaseDefense(basedefence) {
+    this.basedefence = basedefence
+}
+exports.setMaxAtack = function setMaxAtack(maxatack) {
+    this.MaxAtack = maxatack
+}
+exports.setMaxDefense = function setMaxDefense(maxdefense) {
+    this.maxdefense = maxdefense
+}
+exports.setCurrentAtack = function setCurrentAtack(currentatack) {
+    this.CurrentAtack = currentatack
+}
+exports.setCurrentDefense = function setCurrentDefense(currentdefense) {
+    this.CurrentDefense = currentdefense
+}
+exports.setFrontImage = function setFrontImage(frontimage) {
+    this.FrontImage = frontimage
+}
+exports.setHability = function setHability(hability) {
+    this.Hability = hability
+}
+exports.setBaseHealth = function setBaseHealth(basehealth) {
+    this.BaseHealth = basehealth
+}
+exports.setMaxHealth = function setMaxHealth(maxhealth) {
+    this.MaxHealth = maxhealth
+}
+exports.setCurrentHealth = function setCurrentHealth(currenthealth) {
+    this.CurrentHealth = currenthealth
 }

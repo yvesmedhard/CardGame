@@ -1,0 +1,20 @@
+obj = require('../Models/Hero.js')
+
+var hero1 = obj
+hero1.setId('1')
+hero1.setName('Jaina Proudmore')
+hero1.setType('Mago')
+hero1.setDescription('A melhor amiga de Arthas antes de sua queda')
+hero1.setBaseAtack(0)
+hero1.setBaseDefense(0)
+hero1.setMaxAtack(0)
+hero1.setMaxDefense(0)
+hero1.setCurrentAtack(0)
+hero1.setCurrentDefense(0)
+hero1.setFrontImage('jaina.img')
+hero1.setHability('Bola de fogo')
+hero1.setBaseHealth(30)
+hero1.setMaxHealth(30)
+hero1.setCurrentHealth(30)
+
+console.log(hero1)

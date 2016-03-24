@@ -1,39 +1,38 @@
 //Deck Object Model
-function Deck(){
-    var Id
-    var Name
-    var User
-    var Hero
-    var Size
-    var MaxSize
-    var Cards = []
-    var CurrentCards = []
-    
-    function setId(id){
-        this.Id = id
-    }
-    function setName(name){
-        this.Name = name
-    }
-    function setUser(user){
-        this.User = user
-    }
-    function setHero(hero){
-        this.Hero = hero
-    }
-    function setSize(size){
-        this.Size = size
-    }
-    function setMaxSize(size){
-        this.setMaxSize = size
-    }
-    function setCards(cards){
-        this.Cards = cards
-    }
-    function setCurrentCards(currentcards){
-        this.CurrentCards = currentcards
-    }
-    function addCard(card){
-        this.Cards.push(card)
-    }
+
+exports.Id
+exports.Name
+exports.User
+exports.Hero
+exports.Size
+exports.MaxSize
+exports.Cards = []
+exports.CurrentCards = []
+
+exports.setId = function setId(id) {
+    this.Id = id
+}
+exports.setName = function setName(name) {
+    this.Name = name
+}
+exports.setUser = function setUser(user) {
+    this.User = user
+}
+exports.setHero = function setHero(hero) {
+    this.Hero = hero
+}
+exports.setSize = function setSize(size) {
+    this.Size = size
+}
+exports.setMaxSize = function setMaxSize(size) {
+    this.setMaxSize = size
+}
+exports.setCards = function setCards(cards) {
+    this.Cards = cards
+}
+exports.setCurrentCards = function setCurrentCards(currentcards) {
+    this.CurrentCards = currentcards
+}
+exports.addCard = function addCard(card) {
+    this.Cards.push(card)
 }
