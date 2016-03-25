@@ -53,7 +53,7 @@ exports.addCard = function addCard(card) {
     this.CurrentCards.push(card)
 }
 exports.loadDeck = function loadDeck(deck){
-    var deck = JSON2.parse(card)
+    return deck = JSON2.parse(card)
 }
 exports.saveDeck = function saveDeck(){
    var deck =  Deck(this.Id, this.Name, this.User, this.Hero, this.Size, this.MaxSize, this.Cards,this.CurrentCards)
@@ -63,6 +63,7 @@ exports.removeCard = function removeCard(card){
      for (var i = this.Cards.length - 1; i >= 0; i--) {
         if (this.Cards[i] === card) {
             this.Cards.splice(i, 1)
+            break
         }
     }
     this.CurrentCards = this.Cards
