@@ -5,12 +5,12 @@ exports.Name
 exports.Type
 exports.Description
 exports.Cost
-exports.BaseAtack
+exports.BaseAttack
 exports.BaseDefense
 exports.BaseEffect
-exports.MaxAtack
+exports.MaxAttack
 exports.MaxDefense
-exports.CurrentAtack
+exports.CurrentAttack
 exports.CurrentDefense
 exports.CurrentEffect
 exports.FrontImage
@@ -33,8 +33,8 @@ exports.setDescription = function setDescription(description) {
 exports.setCost = function setCost(cost) {
     this.Cost = cost
 }
-exports.setBaseAtack = function setBaseAtack(baseatack) {
-    this.BaseAtack = baseatack
+exports.setBaseAttack = function setBaseAttack(baseattack) {
+    this.BaseAttack = baseattack
 }
 exports.setBaseDefense = function setBaseDefense(basedefence) {
     this.basedefence = basedefence
@@ -42,14 +42,14 @@ exports.setBaseDefense = function setBaseDefense(basedefence) {
 exports.setBaseEffect = function setBaseEffect(baseefect) {
     this.BaseEffect = baseefect
 }
-exports.setMaxAtack = function setMaxAtack(maxatack) {
-    this.MaxAtack = maxatack
+exports.setMaxAttack = function setMaxAttack(maxattack) {
+    this.MaxAttack = maxattack
 }
 exports.setMaxDefense = function setMaxDefense(maxdefense) {
     this.maxdefense = maxdefense
 }
-exports.setCurrentAtack = function setCurrentAtack(currentatack) {
-    this.CurrentAtack = currentatack
+exports.setCurrentAttack = function setCurrentAttack(currentattack) {
+    this.CurrentAttack = currentattack
 }
 exports.setCurrentDefense = function setCurrentDefense(currentdefense) {
     this.CurrentDefense = currentdefense
