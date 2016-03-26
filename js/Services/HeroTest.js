@@ -16,5 +16,6 @@ hero1.setHability('Bola de fogo')
 hero1.setBaseHealth(30)
 hero1.setMaxHealth(30)
 hero1.setCurrentHealth(30)
+hero1.save()
 
 console.log(hero1)

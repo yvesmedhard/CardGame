@@ -15,6 +15,26 @@ exports.BaseHealth
 exports.MaxHealth
 exports.CurrentHealth
 //Setters
+function Hero(id, name, type, description, baseattack, basedefence, maxattack, maxdefense, currentattack, currentdefense, frontimage, hability, basehealth, maxhealth, currenthealth) {
+    return {
+        Id: id,
+        Name: name,
+        Type: type,
+        Description: description,
+        BaseAttack: baseattack,
+        BaseDefense: basedefence,
+        MaxAttack: maxattack,
+        MaxDefense: maxdefense,
+        CurrentAttack: currentattack,
+        CurrentDefense: currentdefense,
+        FrontImage: frontimage,
+        Hability: hability,
+        BaseHealth: basehealth,
+        MaxHealth: maxhealth,
+        CurrentHealth: currenthealth,
+    }
+}
+
 exports.setId = function setId(id) {
     this.Id = id
 }
@@ -62,4 +82,9 @@ exports.setMaxHealth = function setMaxHealth(maxhealth) {
 }
 exports.setCurrentHealth = function setCurrentHealth(currenthealth) {
     this.CurrentHealth = currenthealth
+}
+exports.save = function save() {
+    var user = JSON.stringify( Hero(this.Id, this.Name, this.Type, this.Description, this.BaseAttack, this.BaseDefense, this.MaxAttack, this.MaxDefense, this.CurrentAttack, this.CurrentDefense, this.FrontImage, this.Hability, this.BaseHealth, this.MaxHealth, this.CurrentHealth ))
+    console.log(user)
+    
 }
