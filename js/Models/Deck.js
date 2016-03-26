@@ -1,5 +1,3 @@
-
-var JSON2 = require('JSON2')
 var fs = require('fs');
 //Deck Object Model
 
@@ -54,11 +52,11 @@ exports.addCard = function addCard(card) {
     this.CurrentCards.push(card)
 }
 exports.loadDeck = function loadDeck(deck){
-    return deck = JSON2.parse(card)
+    return deck = JSON.parse(card)
 }
 exports.saveDeck = function saveDeck(){
    var deck =  Deck(this.Id, this.Name, this.User, this.Hero, this.Size, this.MaxSize, this.Cards,this.CurrentCards)
-   console.log(JSON2.stringify(deck))   
+   console.log(JSON.stringify(deck))   
   /*
 fs.writeFile("../../assets/Decks/Deck", JSON2.stringify(deck), function(err) {
     if(err) {
