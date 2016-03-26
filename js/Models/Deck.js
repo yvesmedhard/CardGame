@@ -1,5 +1,6 @@
 
 var JSON2 = require('JSON2')
+var fs = require('fs');
 //Deck Object Model
 
 exports.Id
@@ -57,7 +58,15 @@ exports.loadDeck = function loadDeck(deck){
 }
 exports.saveDeck = function saveDeck(){
    var deck =  Deck(this.Id, this.Name, this.User, this.Hero, this.Size, this.MaxSize, this.Cards,this.CurrentCards)
-   console.log(JSON2.stringify(deck))
+   console.log(JSON2.stringify(deck))   
+  /*
+fs.writeFile("../../assets/Decks/Deck", JSON2.stringify(deck), function(err) {
+    if(err) {
+        return console.log(err);
+    }
+
+    console.log("The file was saved!");
+}); */
 }
 exports.removeCard = function removeCard(card){
      for (var i = this.Cards.length - 1; i >= 0; i--) {

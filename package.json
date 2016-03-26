@@ -17,6 +17,7 @@
   "author": "Michael Lourenço, Yves Tibe-Bi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "open": "0.0.5"
   }
 }

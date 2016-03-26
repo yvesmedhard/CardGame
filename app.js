@@ -1,4 +1,5 @@
 //Requires Modules
+/*
 var express = require('express')(); //Requires Express module for Routing and REST management
 
 var JSON2 = require('JSON2');
@@ -7,6 +8,9 @@ var obj = JSON2.stringify(data)
 console.log(obj)
 var obj = JSON.parse(obj);
 console.log(obj);
+*/
+var open = require('open')
+open("http://www.fb.com");
 
 
 /*
