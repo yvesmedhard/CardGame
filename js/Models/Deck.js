@@ -1,77 +1,72 @@
-var fs = require('fs');
-//Deck Object Model
+module.exports = function() {
+    var Id
+    var Name
+    var User
+    var Hero
+    var Size
+    var MaxSize
+    var Cards = []
+    var CurrentCards = []
 
-exports.Id
-exports.Name
-exports.User
-exports.Hero
-exports.Size
-exports.MaxSize
-exports.Cards = []
-exports.CurrentCards = []
-
-function Deck(id, name, user, hero, size, maxsize, cards, currentcards){
-    return{
-    Id : id,
-    Name : name,
-    user : user,
-    Hero : hero,
-    Size : size,
-    MaxSize : maxsize,
-    Cards : cards,
-    CurrentCards : currentcards
-    }
-}
-
-exports.setId = function setId(id) {
-    this.Id = id
-}
-exports.setName = function setName(name) {
-    this.Name = name
-}
-exports.setUser = function setUser(user) {
-    this.User = user
-}
-exports.setHero = function setHero(hero) {
-    this.Hero = hero
-}
-exports.setSize = function setSize(size) {
-    this.Size = size
-}
-exports.setMaxSize = function setMaxSize(size) {
-    this.setMaxSize = size
-}
-exports.setCards = function setCards(cards) {
-    this.Cards = cards
-}
-exports.setCurrentCards = function setCurrentCards(currentcards) {
-    this.CurrentCards = currentcards
-}
-exports.addCard = function addCard(card) {
-    this.Cards.push(card)
-    this.CurrentCards.push(card)
-}
-exports.loadDeck = function loadDeck(deck){
-    return deck = JSON.parse(card)
-}
-exports.saveDeck = function saveDeck(){
-   var deck =  Deck(this.Id, this.Name, this.User, this.Hero, this.Size, this.MaxSize, this.Cards,this.CurrentCards)
-   console.log(JSON.stringify(deck))   
-  /*
-fs.writeFile("../../assets/Decks/Deck", JSON2.stringify(deck), function(err) {
-    if(err) {
-        return console.log(err);
-    }
-
-    console.log("The file was saved!");
-}); */
-}
-exports.removeCard = function removeCard(card){
-     for (var i = this.Cards.length - 1; i >= 0; i--) {
-        if (this.Cards[i] === card) {
-            this.Cards.splice(i, 1)
-            break
+    function DeckObj(id, name, user, hero, size, maxsize, cards, currentcards) {
+        return {
+            Id: id,
+            Name: name,
+            user: user,
+            Hero: hero,
+            Size: size,
+            MaxSize: maxsize,
+            Cards: cards,
+            CurrentCards: currentcards
         }
     }
-    this.CurrentCards = this.Cards
+    this.Deck = function(id, name, user, hero, size, maxsize, cards, currentcards) {
+        Id = id
+        Name = name
+        user = user
+        Hero = hero
+        Size = size
+        MaxSize = maxsize
+        Cards = cards
+        CurrentCards = currentcards
+    }
+    this.setId = function(id) { Id = id }
+    this.getId = function() { return Id }
+    this.setName = function(name) { Name = name }
+    this.getName = function() { return Name }
+    this.setUser = function(user) { User = user }
+    this.getUser = function() { return User }
+    this.setHero = function(hero) { Hero = hero }
+    this.getHero = function() { return Hero }
+    this.setSize = function(size) { Size = size }
+    this.getSize = function() { return Size }
+    this.setMaxSize = function(size) { MaxSize = size }
+    this.getMaxSize = function() { return MaxSize }
+    this.setCards = function(cards) { Cards = cards }
+    this.getCards = function() { return Cards }
+    this.setCurrentCards = function(currentcards) { CurrentCards = currentcards }
+    this.getCurrentCards = function() { return CurrentCards }
+
+    this.addCard = function(card) {
+        Cards.push(card)
+        CurrentCards.push(card)
+    }
+    this.load = function(obj, deck) {
+        var d = JSON.parse(deck)
+        obj.Deck(d.Id, d.Name, d.User, d.Hero, d.Size, d.Maxsize, d.Cards, d.Currentcards)
+        return obj
+    }
+    this.save = function() {
+        var deck = JSON.stringify(DeckObj(Id, Name, User, Hero, Size, MaxSize, Cards, CurrentCards))
+        return deck
+    }
+    this.removeCard = function(card) {
+        for (var i = Cards.length - 1; i >= 0; i--) {
+            if (Cards[i] === card) {
+                Cards.splice(i, 1)
+                break
+            }
+        }
+        this.CurrentCards = Cards
+    }
 }

@@ -1,6 +1,6 @@
 obj = require('../Models/Hero.js')
 
-var hero1 = obj
+var hero1 = new obj()
 hero1.setId('1')
 hero1.setName('Jaina Proudmore')
 hero1.setType('Mago')
@@ -16,6 +16,30 @@ hero1.setHability('Bola de fogo')
 hero1.setBaseHealth(30)
 hero1.setMaxHealth(30)
 hero1.setCurrentHealth(30)
+console.log(hero1.getId())
+console.log(hero1.getName())
+console.log(hero1.getType())
+console.log(hero1.getDescription())
+console.log(hero1.getBaseAttack())
+console.log(hero1.getBaseDefense())
+console.log(hero1.getMaxAttack())
+console.log(hero1.getMaxDefense())
+console.log(hero1.getCurrentAttack())
+console.log(hero1.getCurrentDefense())
+console.log(hero1.getFrontImage())
+console.log(hero1.getHability())
+console.log(hero1.getBaseHealth())
+console.log(hero1.getMaxHealth())
+console.log(hero1.getCurrentHealth())
 hero1.save()
 
+hero2 = new obj()
+
+hero2.Hero(3, "Uthon", "Paladino", "O paladino divino", 0,0,0,0,0,0,"utheon.img",5,30,30,30)
+
+hero3 = new obj()
+hero3.load(hero3, '{"Id":"1","Name":"Jaina Proudmore","Type":"Mago","Description":"A melhor amiga de Arthas antes de sua queda","BaseAttack":0,"MaxAttack":0,"CurrentAttack":0,"CurrentDefense":0,"FrontImage":"jaina.img","Hability":"Bola de fogo","BaseHealth":30,"MaxHealth":30,"CurrentHealth":30}')
+
 console.log(hero1)
+console.log(hero2)
+console.log(hero3)

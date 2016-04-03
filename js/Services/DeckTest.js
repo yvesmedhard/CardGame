@@ -1,6 +1,6 @@
 obj = require('../Models/Deck.js')
 
-deck1 = obj
+deck1 = new obj()
 deck1.setId(1)
 deck1.setName('Deck de Mago 1')
 deck1.setUser(2)
@@ -14,5 +14,22 @@ deck1.addCard(8)
 deck1.addCard(9)
 deck1.addCard(8)
 deck1.removeCard(8)
+console.log(deck1.getId())
+console.log(deck1.getName())
+console.log(deck1.getUser())
+console.log(deck1.getHero())
+console.log(deck1.getSize())
+console.log(deck1.getMaxSize())
+console.log(deck1.getCards())
+console.log(deck1.getCurrentCards())
+console.log(deck1.save())
+console.log(deck1)
 
-deck1.saveDeck()
+deck2 = new obj()
+deck2.Deck(3, 'Deck do paladino maluco', 4, 3, 8, 60, [1,2,3,4,5,6,7,8], [1,2,3,4,5,6,7,8])
+console.log(deck2)
+
+deck3 = new obj()
+deck3.load(deck3, '{"Id":1,"Name":"Deck de Mago 1","user":2,"Hero":1,"Size":6,"Cards":[1,2,3,4,5,6,7,8,9],"CurrentCards":[1,2,3,4,5,6,7,8,9]}')
+
+console.log(deck3)
