@@ -16,7 +16,7 @@ open("http://www.fb.com");*/
 //
 //Test Models
 //
-var Deck = require('./js/Models/Deck.js')
+    var Deck = require('./js/Models/Deck.js')
 var User = require('./js/Models/User.js')
 var Card = require('./js/Models/Card.js')
 var Hero = require('./js/Models/Hero.js')

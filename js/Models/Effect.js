@@ -10,6 +10,3 @@ function Effect(){
     var action
 }
     
-    
-    
-Condição de ativação

@@ -5,6 +5,7 @@ module.exports = function() {
     var Type
     var Description
     var Cost
+    var Requirements
     var BaseAttack
     var BaseDefense
     var BaseEffect
@@ -18,13 +19,14 @@ module.exports = function() {
     var Status = []
 
     //Setters
-    function CardObj(id, name, type, description, cost, baseAttack, baseDefense, baseEffect, maxAttack, maxDefense, currentAttack, currentDefense, currentEffect, frontImage, backImage, status) {
+    function CardObj(id, name, type, description, cost, requirements,    baseAttack, baseDefense, baseEffect, maxAttack, maxDefense, currentAttack, currentDefense, currentEffect, frontImage, backImage, status) {
         return {
             Id: id,
             Name: name,
             Type: type,
             Description: description,
             Cost: cost,
+            Requirements, requirements,
             BaseAttack: baseAttack,
             BaseDefense: baseDefense,
             BaseEffect: baseEffect,
@@ -38,12 +40,13 @@ module.exports = function() {
             Status: status
         }
     }
-    this.Card = function(id, name, type, description, cost, baseAttack, baseDefense, baseEffect, maxAttack, maxDefense, currentAttack, currentDefense, currentEffect, frontImage, backImage, status) {
+    this.Card = function(id, name, type, description, cost, requirements, baseAttack, baseDefense, baseEffect, maxAttack, maxDefense, currentAttack, currentDefense, currentEffect, frontImage, backImage, status) {
         Id = id
         Name = name
         Type = type
         Description = description
         Cost = cost
+        Requirements = requirements
         BaseAttack = baseAttack
         BaseDefense = baseDefense
         BaseEffect = baseEffect
@@ -85,6 +88,12 @@ module.exports = function() {
     }
     this.getCost = function() {
         return Cost
+    }
+    this.setRequirements = function(requirements){
+        Requirements = requirements
+    }
+    thos.getRequirements = function(){
+        return Requirements
     }
     this.setBaseAttack = function(baseattack) {
         BaseAttack = baseattack
@@ -158,10 +167,10 @@ module.exports = function() {
     }
     this.load = function(obj, card) {
         var c = JSON.parse(card)
-        obj.Card(c.Id, c.Name, c.Type, c.Description, c.Cost, c.BaseAttack, c.BaseDefense, c.BaseEffect, c.MaxAttack, c.MaxDefense, c.CurrentAttack, c.CurrentDefense, c.CurrentEffect, c.FrontImage, c.BackImage, c.Status)
+        obj.Card(c.Id, c.Name, c.Type, c.Description, c.Cost, c.Requirements, c.BaseAttack, c.BaseDefense, c.BaseEffect, c.MaxAttack, c.MaxDefense, c.CurrentAttack, c.CurrentDefense, c.CurrentEffect, c.FrontImage, c.BackImage, c.Status)
     }
     this.save = function() {
-        var card = JSON.stringify(CardObj(Id, Name, Type, Description, Cost, BaseAttack, BaseDefense, BaseEffect, MaxAttack, MaxDefense, CurrentAttack, CurrentDefense, CurrentEffect, FrontImage, BackImage, Status))
+        var card = JSON.stringify(CardObj(Id, Name, Type, Description, Cost, Requirements, BaseAttack, BaseDefense, BaseEffect, MaxAttack, MaxDefense, CurrentAttack, CurrentDefense, CurrentEffect, FrontImage, BackImage, Status))
         return card
     }
 }
